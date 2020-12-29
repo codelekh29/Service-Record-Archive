@@ -1,0 +1,35 @@
+package com.company;
+import java.time.*;
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+                System.out.println("Service Record");
+                System.out.print("Firstname: ");
+                String firstName = scanner.nextLine();
+                System.out.print("Lastname: ");
+                String lastName = scanner.nextLine();
+         System.out.print("Age: ");
+        //Date of Birth
+        LocalDate presentDate = LocalDate.of(1993, 12, 29);
+        //Current Date
+        LocalDate now = LocalDate.now();
+        //Difference between CURRENT DATE and DATE OF BIRTH
+        Period age = Period.between(presentDate, now); //(age = currentDate - dateBirth)
+        System.out.println(age.getYears());
+        //sample dummy mySQL db
+        System.out.println("Database Table: "); //employee name will be save either of the TWO TABLES(Archive or Employee) based on his/her AGE.
+            if ( age.getYears() >= 65){
+                System.out.println("Firstname: "+ firstName + ",\"" + "Lastname: "+ lastName + ",\""+ "Age: " +age.getYears()+ ",\"" + "Archive.Table");
+            } else if(age.getYears() <= 65) {
+                System.out.println("Firstname: "+firstName + ",\"" + "Lastname: "+ lastName + ",\"" + "Age: " +age.getYears()+ ",\"" + "Employee.Table");
+            } else{
+                System.out.println("Not Employed");
+            }
+
+    }
+}
+
