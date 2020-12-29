@@ -25,7 +25,7 @@ public class Main {
             if ( age.getYears() >= 65){
                 System.out.println("Firstname: "+ firstName + ",\"" + "Lastname: "+ lastName + ",\""+ "Age: " +age.getYears()+ ",\"" + "Archive.Table");
             } else if(age.getYears() <= 65) {
-                System.out.println("Firstname: "+firstName + ",\"" + "Lastname: "+ lastName + ",\"" + "Age: " +age.getYears()+ ",\"" + "Employee.Table");
+                System.out.println("Firstname: "+firstName + ",\"" + "Lastname: "+ lastName + ",\"" + "Age: " +age.getYears()+ ",\"" + "PresentEmployee.Table");
             } else{
                 System.out.println("Not Employed");
             }
